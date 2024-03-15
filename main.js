@@ -1,12 +1,15 @@
 var reversedNum = 0;
 
-function isPalindrome (num) {
-    for(var i = 0; i < 5; i++) {
-        reversedNum = reversedNum*10 + num%10;
-    }
-    console.log(reversedNum);
+function isPalindrom(num){
+    var originalNum = num;
 
-    return num === reversedNum;
+    while(num>0){
+        reversedNum = reversedNum*10 + num%10;
+        num = Math.floor(num/10)
+    }
+    console.log(originalNum);
+    return originalNum === reversedNum;
 }
 
-console.log(isPalindrome (12321));
+console.log(isPalindrom(12321));
+console.log(reversedNum);
